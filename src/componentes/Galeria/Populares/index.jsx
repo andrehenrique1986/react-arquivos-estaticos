@@ -1,6 +1,7 @@
 import { styled } from "styled-components"
 import Titulo from "../../Titulo"
 
+
 import fotos from './fotos-populares.json'
 
 const ColunaFotos = styled.section`
@@ -32,7 +33,7 @@ const Populares = () => {
         <section>
             <Titulo $alinhamento='center'>Populares</Titulo>
             <ColunaFotos>
-                {fotos.map(foto => <Imagem key={foto.id} src={foto.path} alt={foto.alt}/>)}
+                {fotos.map(foto => <Imagem key={`foto-${foto.id}`} src={foto.path} alt={foto.path}/>)}
             </ColunaFotos>
             <Botao>Ver mais</Botao>
         </section>
